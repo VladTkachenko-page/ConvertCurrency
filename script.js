@@ -56,14 +56,14 @@ select.addEventListener('change', () => {
                     if (inputUSD[0].value.trim() === '') {
                       alert('Введите число!!!')
                     } else {
-                      inputRUB[0].value = Math.floor(inputUSD[0].value * response.rates.RUB);
+                      inputRUB[0].value = inputUSD[0].value * response.rates.RUB;
                     }
                   });
                   btnConvert[1].addEventListener('click', () => {
                     if (inputRUB[1].value.trim() === '') {
                       alert('Введите число!!!')
                     } else {
-                      inputUSD[1].value = Math.ceil(inputRUB[1].value / response.rates.RUB);
+                      inputUSD[1].value = inputRUB[1].value / response.rates.RUB;
                     }
                   });
                 })
